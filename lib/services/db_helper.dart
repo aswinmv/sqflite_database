@@ -43,5 +43,30 @@ class DatabaseHelper {
 
   // insert method
 
+  insertData(Map<String, dynamic> row) async {
+    Database db = await instance.database;
+    return await db.insert(dbTable, row);
+  }
+
   // read/query method
+
+  Future<List<Map<String, dynamic>>> queryDatabase() async {
+    Database db = await instance.database;
+    return await db.query(dbTable);
+  }
+
+  // update method
+  Future<int> updateData(Map<String, dynamic> row) async {
+    Database db = await instance.database;
+    int id = row[columnId];
+    return await db
+        .update(dbTable, row, where: '$columnId = ?', whereArgs: [id]);
+  }
+
+  // delete method
+
+  Future<int> deleteData(int id) async {
+    Database db = await instance.database;
+    return await db.delete(dbTable, where: '$columnId = ?', whereArgs: [id]);
+  }
 }
