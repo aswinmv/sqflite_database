@@ -2,15 +2,61 @@
 
 A new Flutter project.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+```markdown
+# SQLite CRUD Operations with Flutter
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+A Flutter project demonstrating basic CRUD operations using SQLite database.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
+## Introduction
+
+This Flutter project showcases a simple CRUD application that interacts with an SQLite database. It demonstrates how to perform basic operations such as creating, reading, updating, and deleting records within a Flutter application.
+
+## Features
+
+- Create, Read, Update, and Delete operations on SQLite database
+- Flutter provider for state management
+- Clean and organized project structure
+
+## Technologies Used
+
+- [Flutter](https://flutter.dev/)
+- [SQLite](https://www.sqlite.org/)
+
+## Setup
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/aswinmv/sqllite-crud-flutter.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd sqlite_database
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   flutter pub get
+   ```
+
+4. Run the application:
+
+   ```bash
+   flutter run
+   ```
+
+## Usage
+
+- Open the app and explore the CRUD functionalities.
+- Check the source code for implementation details.
+
+
+
+
