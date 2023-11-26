@@ -13,7 +13,7 @@ A new Flutter project.
   <em>A journey into the world of SQL with Flutter Sqflite</em>
 </p>
 
-```markdown
+
 # SQLite CRUD Operations with Flutter
 
 A Flutter project demonstrating basic CRUD operations using SQLite database.
@@ -29,7 +29,6 @@ This Flutter project showcases a simple CRUD application that interacts with an 
 ## Features
 
 - Create, Read, Update, and Delete operations on SQLite database
-- Flutter provider for state management
 - Clean and organized project structure
 
 ## Technologies Used
@@ -39,10 +38,11 @@ This Flutter project showcases a simple CRUD application that interacts with an 
 
 ## Setup
 
+
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/aswinmv/sqllite-crud-flutter.git
+   git clone https://github.com/aswinmv/sqlite_database.git
    ```
 
 2. Navigate to the project directory:
