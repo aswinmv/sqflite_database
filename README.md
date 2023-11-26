@@ -2,7 +2,7 @@
 
 A new Flutter project.
 
-<h1 align="center">Exploring SQL for Flutter Sqflite</h1>
+<h1 align="center">Exploring SQL with Flutter Sqflite</h1>
 
 <p align="center">
   <img src="https://cdn.pixabay.com/photo/2013/09/18/12/13/sqlite-183454_1280.png" alt="SQLite Logo" width="200">
