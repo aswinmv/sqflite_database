@@ -2,7 +2,15 @@
 
 A new Flutter project.
 
+<h1 align="center">Exploring SQL for Flutter Sqflite</h1>
 
+<p align="center">
+  <img src="[your_project_logo.png](https://cdn.pixabay.com/photo/2013/09/18/12/13/sqlite-183454_1280.png)" alt="Project Logo" width="200">
+</p>
+
+<p align="center">
+  <em>A journey into the world of SQL with Flutter Sqflite</em>
+</p>
 
 ```markdown
 # SQLite CRUD Operations with Flutter
