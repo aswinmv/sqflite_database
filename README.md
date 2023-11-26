@@ -13,7 +13,9 @@ A Flutter project demonstrating basic CRUD operations using SQLite database.
 
 ## Introduction
 
-This Flutter project showcases a simple CRUD application that interacts with an SQLite database. It demonstrates how to perform basic operations such as creating, reading, updating, and deleting records within a Flutter application.
+This Flutter project showcases a simple CRUD application that interacts with an SQLite database.
+ It demonstrates how to perform basic operations such as
+ creating, reading, updating, and deleting records within a Flutter application.
 
 ## Features
 
