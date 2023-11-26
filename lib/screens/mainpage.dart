@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sqlite_database/services/db_helper.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -24,10 +25,31 @@ class _MainPageState extends State<MainPage> {
         child: SizedBox(
           height: 300,
           child: Column(children: [
-            ElevatedButton(onPressed: () {}, child: const Text("Create")),
-            ElevatedButton(onPressed: () {}, child: const Text("Read")),
-            ElevatedButton(onPressed: () {}, child: const Text("Update")),
-            ElevatedButton(onPressed: () {}, child: const Text("Delete"))
+            ElevatedButton(
+                onPressed: () async {
+                  await DatabaseHelper.instance.insertData(
+                      {DatabaseHelper.columnName: " helloo araa aswin"});
+                },
+                child: const Text("Create")),
+            ElevatedButton(
+                onPressed: () async {
+                  var dbQuery = await DatabaseHelper.instance.queryDatabase();
+                  print(dbQuery);
+                },
+                child: const Text("Read")),
+            ElevatedButton(
+                onPressed: () async {
+                  await DatabaseHelper.instance.updateData({
+                    DatabaseHelper.columnId: 4,
+                    DatabaseHelper.columnName: "hai"
+                  });
+                },
+                child: const Text("Update")),
+            ElevatedButton(
+                onPressed: () async {
+                  await DatabaseHelper.instance.deleteData(3);
+                },
+                child: const Text("Delete"))
           ]),
         ),
       ),

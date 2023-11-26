@@ -15,11 +15,9 @@ class DatabaseHelper {
   static final DatabaseHelper instance = DatabaseHelper();
 
   // database initialization
-  late Database _database;
+  static Database? _database;
 
-  Future<Database> get database async {
-    // ignore: unnecessary_null_comparison
-    if (_database != null) return _database;
+  Future<Database?> get database async {
     _database = await initDB();
     return _database;
   }
@@ -35,7 +33,7 @@ class DatabaseHelper {
 
   CREATE TABLE $dbTable (
     $columnId INTEGER PRIMARY KEY,
-    $columnName TEXT NOT NULL,
+    $columnName TEXT NOT NULL
   )
 
 ''');
@@ -44,29 +42,29 @@ class DatabaseHelper {
   // insert method
 
   insertData(Map<String, dynamic> row) async {
-    Database db = await instance.database;
-    return await db.insert(dbTable, row);
+    Database? db = await instance.database;
+    return await db!.insert(dbTable, row);
   }
 
   // read/query method
 
   Future<List<Map<String, dynamic>>> queryDatabase() async {
-    Database db = await instance.database;
-    return await db.query(dbTable);
+    Database? db = await instance.database;
+    return await db!.query(dbTable);
   }
 
   // update method
   Future<int> updateData(Map<String, dynamic> row) async {
-    Database db = await instance.database;
+    Database? db = await instance.database;
     int id = row[columnId];
-    return await db
+    return await db!
         .update(dbTable, row, where: '$columnId = ?', whereArgs: [id]);
   }
 
   // delete method
 
   Future<int> deleteData(int id) async {
-    Database db = await instance.database;
-    return await db.delete(dbTable, where: '$columnId = ?', whereArgs: [id]);
+    Database? db = await instance.database;
+    return await db!.delete(dbTable, where: '$columnId = ?', whereArgs: [id]);
   }
 }
